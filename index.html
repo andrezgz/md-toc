@@ -16,10 +16,16 @@
             function titlesToTOC() {
                 const content = document.querySelector("#content");
                 content.value = tocIt(content.value,1,6);
+                content.focus();
+                content.select();
+                document.execCommand('copy');
             }
             function titleToFN() {
                 const content = document.querySelector("#content");
                 content.value = fnIt(content.value);
+                content.focus();
+                content.select();
+                document.execCommand('copy');
             }
         </script>
     </head>

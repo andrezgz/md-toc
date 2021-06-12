@@ -11,7 +11,6 @@ function fnIt(inputMD)
         if(match)
         {
             var headingLevel = match[1] && match[1].length || 0;
-            console.log(headingLevel);
             var headingTitle = match[2].replace(/<.*?>/g, "");
 
             if(headingLevel > 1)
