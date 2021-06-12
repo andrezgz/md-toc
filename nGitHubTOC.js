@@ -1,4 +1,4 @@
-function tocIt(inputMD, minHeading, maxHeading, ignoreLinex)
+function tocIt(inputMD, minHeading, maxHeading)
 {
     if(minHeading > maxHeading) return;
 
