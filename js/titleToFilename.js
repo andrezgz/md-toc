@@ -7,13 +7,14 @@ function fnIt(inputMD)
     {
         var inputMDLine = inputMDLines[i];
 
-        var match = /^(#+) (.+)$/.exec(inputMDLine);
+        var match = /^(?:(#+) )?(.+)$/.exec(inputMDLine);
         if(match)
         {
-            var headingLevel = match[1].length;
+            var headingLevel = match[1] && match[1].length || 0;
+            console.log(headingLevel);
             var headingTitle = match[2].replace(/<.*?>/g, "");
 
-            if(headingLevel != 1)
+            if(headingLevel > 1)
             {
                 continue;
             }
