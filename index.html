@@ -12,17 +12,15 @@
         </style>
         <script src="nGitHubTOC.js"></script>
         <script>
-            function doIt() {
+            function titlesToTOC() {
                 const content = document.querySelector("#content");
-                const minHeading = 1;
-                const maxHeading = 6;
-                content.value = tocIt(content.value, minHeading, maxHeading);
+                content.value = tocIt(content.value,1,6);
             }
         </script>
     </head>
     <body>
         <div>
-            <button onclick="doIt(); return false;">TOC IT</button>
+            <button onclick="titlesToTOC(); return false;">TOC IT</button>
         </div>
         <div>
             <textarea id="content"></textarea>
