@@ -43,7 +43,7 @@ function tocIt(inputMD, minHeading, maxHeading)
                 anchorTracker[headingAnchor] = 0;
             }
 
-            outputMD += " ".repeat(headingLevel * 2) + "- [" + headingTitle + "](#" + headingAnchor + ")\n";
+            outputMD += " ".repeat(headingLevel * 4) + "- [" + headingTitle + "](#" + headingAnchor + ")\n";
         }
     }
 
