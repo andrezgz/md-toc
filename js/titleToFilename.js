@@ -1,4 +1,4 @@
-function fnIt(inputMD)
+function fnIt(inputMD, cleanHTTPS)
 {
     inputMDLines = inputMD.split("\n");
     var outputMD = "";
@@ -30,6 +30,7 @@ function fnIt(inputMD)
                         .replace(/[_-]+/g, "-")
                         .replace(/\-$/, "");
 
+            if (cleanHTTPS) { outputMD = outputMD.replace(/^https?\-/, ""); }
         }
     }
 
